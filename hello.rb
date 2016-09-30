@@ -1,6 +1,6 @@
 require_relative 'caesar_cipher.rb'
 require 'sinatra'
-require 'sinatra/reloader'
+#require 'sinatra/reloader'
 
 get '/' do
   to_encrypt = params['input']
