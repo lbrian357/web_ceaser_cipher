@@ -4,10 +4,12 @@
 </head>
 
 <body>
-  <p>hello world, welcome to a caesar cipher </p>
-  <p>Enter 'shift' number followed by a space before the message you want to encrypt</p>
+  <p>Welcome to A Caesar Cipher </p>
   <form>
-    <input type='text' name='input'/>
+    <p>Message:<input type='text' name='input'/></p>
+    <br>
+    <p>Shift:<input type='text' name='shift'/></p>
+    <br>
     <input type='submit' value='Encrypt!'/>
   </form>
   <% if encrypted != nil %>

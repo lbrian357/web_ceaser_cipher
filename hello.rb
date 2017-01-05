@@ -1,17 +1,17 @@
 require_relative 'caesar_cipher.rb'
 require 'sinatra'
-#require 'sinatra/reloader'
+require 'sinatra/reloader'
 
 get '/' do
-  to_encrypt = params['input']
-  if request.query_string =~ /input=\d+\+.+/
-    shift = first_word(to_encrypt)
-    sentence = not_first_word(to_encrypt)
+  if request.query_string =~ /input=\w+&shift=\d+/
+    shift = params['shift']
+    sentence = params['input']
     encrypted = caesar_cipher(sentence, shift.to_i)
   else
-    encrypted = 'correct input not found, please try again'
+    encrypted = 'correct input not found'
   end
   erb :index, :locals => {:encrypted => encrypted}
+  #"#{request.query_string}"
 end
 
 def first_word(sentence)
