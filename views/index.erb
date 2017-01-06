@@ -1,21 +1,29 @@
 <!DOCTYPE html>
 <head>
+  <link rel='stylesheet' type='text/css' href='styles.css'>
   <title>Caesar Cipher</title>
 </head>
 
 <body>
-  <p>Welcome to A Caesar Cipher </p>
-  <form>
-    <p>Message:<input type='text' name='input'/></p>
-    <br>
-    <p>Shift:<input type='text' name='shift'/></p>
-    <br>
-    <input type='submit' value='Encrypt!'/>
-  </form>
-  <% if encrypted != nil %>
-  <p>Your encrypted message is:</p>
-  <p> <%= encrypted %> </p>
-<% end %>
+  <h2>Welcome to a Caesar Cipher </h2>
+  <table id="cipher_table">
+    <tr>
+      <td>
+        <form>
+          Message:<input class="textbox" type='text' name='input'/>
+          <p>Shift:<input class="textbox" type='text' name='shift'/></p>
+          <input class="button" type='submit' value='Encrypt!'/>
+        </form>
+      </td>
+    </tr>
+  </table>
+  <% if encrypted != ''%>
+    <p>Your encrypted message is:</p>
+    <p> <%= encrypted %> </p>
+  <% end %>
+  <% if error_message != '' %>
+    <p><%= error_message %></p>
+  <% end %>
 </body>
 
 </html>

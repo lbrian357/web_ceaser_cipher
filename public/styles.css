@@ -1,0 +1,29 @@
+html {
+  background-color:  #776472;
+  font-family: Tahoma, Geneva, sans-serif;
+}
+
+body {
+  text-align: center;
+  color: black;
+}
+
+table {
+  margin: 0 auto; 
+}
+
+.textbox {
+  background-color: #A799B7;
+}
+
+.button {
+  background-color: #A799B7;
+}
+
+#cipher_table {
+  border-radius: 25px;
+  border: 1px solid #294D4A;
+  padding: 20px;
+  width: 200px;
+  height: 150px;
+}
